@@ -1,0 +1,1 @@
+This repository created for that challenge: https://adventofcode.com/
