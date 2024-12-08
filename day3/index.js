@@ -98,3 +98,4 @@ function getInitialArrayPartTwo() {
 	reg.forEach(item => inputArr.push(item[0]));
 	return inputArr;
 }
+
