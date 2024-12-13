@@ -60,28 +60,12 @@ function checkMAS(i, j) {
 	let count = 0;
 	try {
 		if (checkDirection(i, j, 1, UPRIGHT)) {
-			//console.log("found upright");
-			// if (inputArr[i - 2][j] == "M")
-			// 	if (checkDirection(i - 2, j, 1, DOWNRIGHT))
-			// 		count++
 			if (inputArr[i][j + 2] == "M")
 				if (checkDirection(i, j + 2, 1, UPLEFT))
 					count++
 		}
-		// if (checkDirection(i, j, 1, UPLEFT)) {
-		// 	console.log("found upleft");
-		// 	if (inputArr[i + 2][j] == "M")
-		// 		if (checkDirection((i + 2), j, 1, UPRIGHT))
-		// 			count++
-		// 	if (nextSymbol[i][j + 2] == "M")
-		// 		if (checkDirection(i, j + 2, 1, DOWNLFT))
-		// 			count++
-		// }
 		if (checkDirection(i, j, 1, DOWNRIGHT)) {
-			//console.log("found downright");
 			if (inputArr[i + 2][j] == "M") {
-				//console.log("M: ", i + 2, j);
-				//console.log(checkDirection(i + 2, j, UPRIGHT))
 				if (checkDirection(i + 2, j, 1, UPRIGHT))
 					count++
 			}
@@ -96,9 +80,6 @@ function checkMAS(i, j) {
 				if (checkDirection(i + 2, j, 1, UPLEFT))
 					count++
 			}
-			// if (inputArr[i][j - 2] == "M")
-			// 	if (checkDirection(i, j - 2, 1, DOWNRIGHT))
-			// 		count++
 		}
 	} catch {
 		return count;
