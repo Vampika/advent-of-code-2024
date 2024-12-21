@@ -11,8 +11,6 @@ const UPLEFT = "upleft";
 const DOWNRIGHT = "downright";
 const DOWNLFT = "downleft";
 
-
-
 const data = fs.readFileSync("data.txt").toString();
 
 const inputArr = getInputArray(data);
@@ -50,11 +48,6 @@ for (let i = 0; i < length; i++) {
 
 console.log(answer2);
 
-
-
-
-
-
 function checkMAS(i, j) {
 	//console.log("check mas", i, j);
 	let count = 0;
@@ -87,11 +80,6 @@ function checkMAS(i, j) {
 
 	return count;
 }
-
-
-
-
-
 
 function checkXMAS(i, j) {
 	let count = 0;
@@ -185,16 +173,8 @@ function checkDirection(i, j, pointer, direction) {
 	}
 }
 
-
-
-
-
-
-
-
-
 function getInputArray(data) {
-	const inputArr = [[]];
+	let inputArr = [[]];
 	let i = 0;
 	let k = 0;
 
@@ -212,6 +192,5 @@ function getInputArray(data) {
 		}
 		k++;
 	}
-
 	return inputArr;
 }
