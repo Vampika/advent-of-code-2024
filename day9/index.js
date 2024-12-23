@@ -30,6 +30,7 @@ function newOptimizing(data) {
 	let hash = {};
 
 	for (let i = data.length - 1; i >= 0; i--) {
+		//console.log(data);
 		if (data[i] !== ".") {
 			//Нашли число
 			if (number === null) {
@@ -48,7 +49,7 @@ function newOptimizing(data) {
 							//console.log("Переносим число ", number);
 						}
 					}
-					console.log(data);
+					//console.log(data);
 					//Перенесли данные
 					number = data[i];
 					distance = 1;
@@ -91,7 +92,7 @@ function checkEmptySpace(data, rightPointer, distance) {
 	let count = 0;
 	let start = -1;
 
-	for (let i = 0; i < rightPointer; i++) {
+	for (let i = 0; i < rightPointer + 1; i++) {
 		if (data[i] === ".") {
 			if (start === -1) start = i;
 			count++;
